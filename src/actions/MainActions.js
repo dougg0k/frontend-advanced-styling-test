@@ -24,11 +24,40 @@ export const fetchMainData = () => {
 	};
 	return async dispatch => {
 		try {
-			const response = await fetch("", fetchOptions);
+			const response = await fetch(
+				process.env.DATA_ENDPOINT || "",
+				fetchOptions
+			);
 			const data = await response.json();
-			dispatch(mainDataSuccess(data.results));
+			dispatch(mainDataSuccess(data || localData));
 		} catch (err) {
 			dispatch(mainDataFailure(err));
 		}
 	};
+};
+
+const localData = {
+	title: "CodersClan Frontend Test",
+	cards: [
+		{
+			image: `${process.env.PUBLIC_URL}/assets/card1.png`,
+			title: "Aenean nec sem vestibulum",
+			text:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut diam ac felis placerat consequat in vitae justo. Curabitur porta et dolor ac."
+		},
+		{
+			image: `${process.env.PUBLIC_URL}/assets/logo.svg`,
+			title: "Aenean nec sem vestibulum",
+			text:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut diam ac felis placerat consequat in vitae justo. Curabitur porta et dolor ac. Morbi quis elementum ipsum"
+		},
+		{
+			image: `${process.env.PUBLIC_URL}/assets/logo.svg`,
+			background: `${process.env.PUBLIC_URL}/assets/card3.png`,
+			title: "Aenean nec sem vestibulum",
+			text:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut diam ac felis placerat consequat in vitae justo. Curabitur porta et dolor ac. Morbi quis elementum ipsum"
+		}
+	],
+	cta: "Aenean vitae"
 };
