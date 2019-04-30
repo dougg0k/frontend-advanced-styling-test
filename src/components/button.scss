@@ -1,0 +1,31 @@
+.button-info {
+	width: 280px;
+	height: 62px;
+	$border: 2px;
+	position: relative;
+	background-clip: padding-box;
+	border: solid $border transparent;
+	background-color: #fff;
+	border-radius: 15px;
+	outline: none;
+	color: #6f32f8;
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	&:hover {
+		background-color: transparent;
+		color: #fff;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		margin: -$border;
+		border-radius: inherit;
+		background-image: linear-gradient(-55deg, #5c27fe 0%, #c165dd 100%);
+	}
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./button.scss";
 
-export default () => {
-	return <div />;
+export default props => {
+	return <button className="button-info">{props.text}</button>;
 };
