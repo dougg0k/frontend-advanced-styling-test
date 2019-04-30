@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchMainData } from "./actions";
 import "./App.scss";
+import HeroContainer from "./containers/HeroContainer";
 
 class App extends React.PureComponent {
 	componentDidMount() {
@@ -16,7 +17,9 @@ class App extends React.PureComponent {
 				<Helmet>
 					<title>{this.props.data.title}</title>
 				</Helmet>
-				<div />
+				<div>
+					<HeroContainer />
+				</div>
 			</div>
 		);
 	}
