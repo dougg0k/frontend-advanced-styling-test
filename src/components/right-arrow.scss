@@ -1,0 +1,22 @@
+.arrow-container {
+	height: 58px;
+	width: 58px;
+	background-color: #4f4e4d;
+	border-radius: 50%;
+	opacity: 0.2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.arrow:before {
+		position: relative;
+		top: 2pt;
+		content: "";
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border-right: 0.3em solid #fff;
+		border-top: 0.3em solid #fff;
+		transform: rotate(45deg);
+		margin-right: 0.5em;
+	}
+}
