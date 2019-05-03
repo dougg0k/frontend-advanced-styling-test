@@ -1,0 +1,24 @@
+@import "colors";
+
+@mixin arrow {
+	height: 58px;
+	width: 58px;
+	background-color: $color6;
+	border-radius: 50%;
+	opacity: 0.2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+}
+
+@mixin arrow-before {
+	position: relative;
+	top: 2pt;
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-right: 0.3em solid $white;
+	border-top: 0.3em solid $white;
+}
