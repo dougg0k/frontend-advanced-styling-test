@@ -1,0 +1,113 @@
+@import "colors";
+
+.card-container {
+	$border: 5px;
+	$padding: 20px;
+	background-repeat: no-repeat;
+	position: relative;
+	background-clip: padding-box;
+	border-radius: 10px;
+	width: 380px - ($border + $padding);
+	height: 375px - ($border + $padding);
+	padding: $padding;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 21px $boxshadow1;
+	background-size: cover;
+	&:first-of-type {
+		border: solid $border transparent;
+		background-color: $white;
+		&:hover::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			margin: -$border;
+			border-radius: inherit;
+			background-image: linear-gradient(to left top, $color4, $color5),
+				linear-gradient(to right bottom, $color4, $color5);
+		}
+		h1 {
+			margin: 0;
+			margin-top: 20px;
+		}
+		p {
+			margin: 0;
+			margin-top: 15px;
+			text-align: start;
+			margin-bottom: 10px;
+		}
+	}
+	&:nth-of-type(3) {
+		text-align: center;
+		&:hover {
+			background-image: linear-gradient(-55deg, $color8 0%, $color9 100%);
+			h1 {
+				color: $white;
+			}
+			p {
+				color: $white;
+			}
+			.card-image {
+				path {
+					fill: $white;
+				}
+				svg {
+					transform: scale(1.25);
+				}
+			}
+		}
+		.card-image {
+			path {
+				fill: url(#bgGradient-1);
+			}
+		}
+	}
+	&:last-of-type {
+		background-color: linear-gradient(to top, $color10 0%, $color11 100%);
+		text-align: center;
+		h1 {
+			color: $white;
+		}
+		p {
+			color: $white;
+		}
+		.card-image {
+			path {
+				fill: $white;
+			}
+		}
+	}
+	.card-image {
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		margin-top: 48px - $padding;
+		svg {
+			width: 96px;
+			height: 98px;
+		}
+	}
+	h1 {
+		font-size: 25px;
+		font-weight: 700;
+		color: $color6;
+		margin: 0;
+		margin-top: 30px;
+		overflow: hidden;
+	}
+	p {
+		color: $color7;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		margin: 0;
+		margin-top: 15px;
+		overflow: hidden;
+		word-break: break-word;
+		display: block;
+	}
+}

@@ -1,9 +1,9 @@
 import React from "react";
-import "./right-arrow.scss";
+import "./down-arrow.scss";
 
 export default () => {
 	return (
-		<div className="arrow-container">
+		<div className="down-arrow-container">
 			<div className="arrow" />
 		</div>
 	);

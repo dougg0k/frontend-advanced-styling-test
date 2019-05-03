@@ -1,10 +1,9 @@
 @import "common";
 
-.right-arrow-container {
+.down-arrow-container {
 	@include arrow;
 	.arrow:before {
 		@include arrow-before;
-		transform: rotate(45deg);
-		margin-right: 0.5em;
+		transform: rotate(135deg);
 	}
 }

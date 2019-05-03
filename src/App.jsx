@@ -17,17 +17,17 @@ class App extends React.PureComponent {
 	}
 
 	render() {
-		const { title, cards } = this.props.data;
+		const { title, cards, cta } = this.props.data;
 		return (
 			<div>
 				<Helmet>
 					<title>{title}</title>
 				</Helmet>
-				<div>
+				<div className="main-container">
 					<HeroContainer />
 					<Title title={title} />
 					<SmallDivider />
-					<TopInformationContainer cards={cards} />
+					<TopInformationContainer cardsData={cards} buttonText={cta} />
 				</div>
 			</div>
 		);

@@ -1,0 +1,21 @@
+.top-information-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.cards-container {
+		display: flex;
+		align-items: center;
+	}
+	.button-container {
+		margin-top: 80px;
+	}
+}
+
+@media (max-width: 1750px) {
+	.top-information-container {
+		.cards-container {
+			flex-direction: column;
+		}
+	}
+}
