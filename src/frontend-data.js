@@ -3,7 +3,8 @@ export const localData = {
 	cards: [
 		{
 			image: `${process.env.PUBLIC_URL}/assets/imgs/card1.png`,
-			title: "Aenean nec sem vestibulum",
+			title:
+				"Aenean nec sem vestibulum vestibulum vestibulum vestibulum vestibulum ",
 			text:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut diam ac felis placerat consequat in vitae justo. Curabitur porta et dolor ac."
 		},

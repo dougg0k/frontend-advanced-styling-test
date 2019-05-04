@@ -4,6 +4,13 @@
 	@include arrow;
 	.arrow:before {
 		@include arrow-before;
+		top: 0;
 		transform: rotate(135deg);
+	}
+}
+
+@media (max-width: 1750px) {
+	.down-arrow-container {
+		margin: 20px;
 	}
 }

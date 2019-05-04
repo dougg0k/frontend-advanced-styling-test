@@ -1,21 +1,22 @@
 @import "colors";
 
+$card-border: 5px;
+$card-padding: 20px;
+
 .card-container {
-	$border: 5px;
-	$padding: 20px;
 	background-repeat: no-repeat;
 	position: relative;
 	background-clip: padding-box;
 	border-radius: 10px;
-	width: 380px - ($border + $padding);
-	height: 375px - ($border + $padding);
-	padding: $padding;
+	width: 380px - ($card-border + $card-padding);
+	height: 375px - ($card-border + $card-padding);
+	padding: $card-padding;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 0 21px $boxshadow1;
 	background-size: cover;
 	&:first-of-type {
-		border: solid $border transparent;
+		border: solid $card-border transparent;
 		background-color: $white;
 		&:hover::before {
 			content: "";
@@ -25,7 +26,7 @@
 			bottom: 0;
 			left: 0;
 			z-index: -1;
-			margin: -$border;
+			margin: -$card-border;
 			border-radius: inherit;
 			background-image: linear-gradient(to left top, $color4, $color5),
 				linear-gradient(to right bottom, $color4, $color5);
@@ -85,23 +86,26 @@
 		display: flex;
 		align-self: center;
 		justify-content: center;
-		margin-top: 48px - $padding;
+		width: 100%;
+		height: auto;
 		svg {
 			width: 96px;
 			height: 98px;
 		}
 	}
 	h1 {
-		font-size: 25px;
+		font-size: 1.5625rem;
 		font-weight: 700;
 		color: $color6;
 		margin: 0;
 		margin-top: 30px;
 		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	p {
 		color: $color7;
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 400;
 		line-height: 30px;
 		margin: 0;
@@ -109,5 +113,18 @@
 		overflow: hidden;
 		word-break: break-word;
 		display: block;
+	}
+}
+
+@media (max-width: 500px) {
+	.card-container {
+		width: 280px - ($card-border + $card-padding);
+		height: 328px - ($card-border + $card-padding);
+		h1 {
+			font-size: 0.9375rem;
+		}
+		p {
+			font-size: 0.875rem;
+		}
 	}
 }

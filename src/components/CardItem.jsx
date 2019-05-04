@@ -18,7 +18,7 @@ export default props => {
 			{image && isSvg(image) ? (
 				<ReactSVG src={image} alt={title} className="card-image" />
 			) : (
-				<img src={image} alt={title} />
+				<img src={image} alt={title} className="card-image" />
 			)}
 			<h1>{title}</h1>
 			<p>{text}</p>

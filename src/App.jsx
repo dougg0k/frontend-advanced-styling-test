@@ -6,7 +6,7 @@ import { fetchMainData, fetchMainDataSuccess } from "./actions";
 import "./App.scss";
 import SmallDivider from "./components/SmallDivider";
 import Title from "./components/Title";
-import HeroContainer from "./containers/HeroContainer";
+import HeroBannerContainer from "./containers/HeroBannerContainer";
 import TopInformationContainer from "./containers/TopInformationContainer";
 import { localData } from "./frontend-data";
 
@@ -24,7 +24,7 @@ class App extends React.PureComponent {
 					<title>{title}</title>
 				</Helmet>
 				<div className="main-container">
-					<HeroContainer />
+					<HeroBannerContainer />
 					<Title title={title} />
 					<SmallDivider />
 					<TopInformationContainer cardsData={cards} buttonText={cta} />
