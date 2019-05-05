@@ -19,17 +19,20 @@ class App extends React.PureComponent {
 	render() {
 		const { title, cards, cta } = this.props.data;
 		return (
-			<div>
+			<>
 				<Helmet>
 					<title>{title}</title>
 				</Helmet>
 				<div className="main-container">
-					<HeroBannerContainer />
-					<Title title={title} />
-					<SmallDivider />
-					<TopInformationContainer cardsData={cards} buttonText={cta} />
+					<HeroBannerContainer>
+						<div className="info-container">
+							<Title title={title} />
+							<SmallDivider />
+							<TopInformationContainer cardsData={cards} buttonText={cta} />
+						</div>
+					</HeroBannerContainer>
 				</div>
-			</div>
+			</>
 		);
 	}
 }
