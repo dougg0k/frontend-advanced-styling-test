@@ -1,37 +1,75 @@
+@mixin layers-center {
+	display: flex;
+	justify-content: center;
+}
+
 .parallax-container {
+	height: 100vh !important;
 	.background {
 		background-color: #e9dab8;
+		max-height: 710px;
 		height: 100%;
-		max-height: 720px;
 		width: 100%;
 	}
-	.clouds {
-		position: absolute;
-		left: 5%;
+	.rectangle-container {
+		.rectangle {
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	.mountain {
-		position: absolute;
-		margin-left: -16%;
-		opacity: 0.29;
+	.clouds-container {
+		@include layers-center;
+		.clouds {
+			position: absolute;
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	.logo {
-		left: 33%;
-		position: absolute;
+	.mountain-container {
+		@include layers-center;
+		.mountain {
+			position: absolute;
+			margin-left: -5%;
+			opacity: 0.29;
+		}
 	}
-	.trees {
-		position: absolute;
-		margin-left: -4%;
+	.logo-container {
+		@include layers-center;
+		.logo {
+			position: absolute;
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	.beach-houses {
-		position: absolute;
-		left: 12.5%;
+	.trees-container {
+		@include layers-center;
+		.trees {
+			position: absolute;
+			margin-left: 0.5%;
+		}
 	}
-	.birds {
-		position: absolute;
-		left: 3.5%;
+	.houses-container {
+		@include layers-center;
+		.houses {
+			position: absolute;
+			margin-left: -1%;
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	.people {
-		position: absolute;
-		left: 6%;
+	.birds-container {
+		@include layers-center;
+		.birds {
+			position: absolute;
+			left: 3.5%;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.people-container {
+		@include layers-center;
+		.people {
+			position: absolute;
+		}
 	}
 }

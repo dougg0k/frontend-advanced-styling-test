@@ -13,41 +13,36 @@ class HeroBannerContainer extends React.PureComponent {
 		return (
 			<Parallax
 				ref={ref => (this.parallax = ref)}
-				pages={3}
 				className="parallax-container"
 			>
 				<ParallaxLayer offset={0}>
 					<div className="background" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={1}>
-					<img src={url("rectangle")} alt="rectangle" />
+				<ParallaxLayer offset={0} speed={0.5} className="rectangle-container">
+					<img src={url("rectangle")} alt="rectangle" className="rectangle" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.02} speed={0.05}>
+				<ParallaxLayer offset={0.02} speed={0.05} className="clouds-container">
 					<img src={url("clouds")} alt="clouds" className="clouds" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.14} speed={0.1}>
+				<ParallaxLayer offset={0.14} speed={0.1} className="logo-container">
 					<img src={url("logo")} alt="logo" className="logo" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.26} speed={0.1}>
+				<ParallaxLayer offset={0.26} speed={0.1} className="mountain-container">
 					<img src={url("mountain")} alt="mountain" className="mountain" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.55} speed={0.4}>
-					<img src={url("sea")} alt="sea" />
+				<ParallaxLayer offset={0.55} speed={0.4} className="sea-container">
+					<img src={url("sea")} alt="sea" className="sea" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.417} speed={0.6}>
-					<img
-						src={url("beach-houses")}
-						alt="beach-houses"
-						className="beach-houses"
-					/>
+				<ParallaxLayer offset={0.417} speed={0.6} className="houses-container">
+					<img src={url("houses")} alt="houses" className="houses" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.32} speed={0.6}>
+				<ParallaxLayer offset={0.32} speed={0.6} className="birds-container">
 					<img src={url("birds")} alt="birds" className="birds" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.135} speed={0.7}>
+				<ParallaxLayer offset={0.135} speed={0.7} className="trees-container">
 					<img src={url("trees")} alt="trees" className="trees" />
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.43} speed={0.8}>
+				<ParallaxLayer offset={0.43} speed={1} className="people-container">
 					<img src={url("people")} alt="people" className="people" />
 				</ParallaxLayer>
 				{this.props.children}
